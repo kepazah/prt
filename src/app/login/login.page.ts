@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  private logo = [
+
+    {
+      imageURL: '../assets/images/logo.png'
+    }
+
+  ]
+
   constructor() { }
 
   ngOnInit() {
