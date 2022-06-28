@@ -26,13 +26,13 @@ ion-content {
             margin-top:35px;
             height: 48px;
             font-size: 18px;
+            text-transform: initial;
+            border-radius: 50px;
+            box-shadow: 1px 8px 8px 0px rgba(0,0,0, 0.5);
 
         }
 
-        ion-input {
-
-            background-color: azure;
-        }
+       
         
     }
 

@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">
+        Ingresar
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+  <div class="d-flex justify-content-center" style="margin-top:50px;"></div>
+    <!--<ion-item *ngFor="let logos of logo">
+      <ion-img [src]="logos.imageURL"></ion-img>
+    </ion-item> -->
+    <div id="header">
+      <img src="../assets/images/logo.png">
+      <ion-text><h1>Crea Tu Cuenta</h1></ion-text>
 
+
+    </div>
+  
+    <form id="form">
+      <app-input placeholder="Tu Nombre"></app-input>
+      <app-input placeholder="Correo Electrónico"></app-input>
+      <app-input type="password" placeholder="Contraseña"></app-input>
+      <ion-button expand="block" shape="round">Inscribete</ion-button>
+    </form>
+    
+    
+  
+  
 </ion-content>
