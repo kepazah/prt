@@ -1,0 +1,40 @@
+ion-content {
+
+    #header {
+
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    h1{
+
+        font-weight: 600;
+        font-size: 22px;
+        color: #030303;
+
+    }
+
+    #form {
+
+        margin-top:15%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        ion-button{
+
+            margin-top:35px;
+            height: 48px;
+            font-size: 18px;
+
+        }
+
+        ion-input {
+
+            background-color: azure;
+        }
+        
+    }
+
+    
+}
