@@ -1,17 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Notificaciones
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="d-flex justify-content-center" style="margin-top:50px;"></div>
+  <div id="header">
+  <img src="../assets/images/logo.png">
+  <h1>Recordatorio</h1><br></div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="alert alert-primary" role="alert">
+    Faltan 6 días para su visita
+  </div>
+  
+  <div class="alert alert-success" role="alert">
+    Control de Gases exitoso!
+  </div>
+  <div class="alert alert-success" role="alert">
+    Documentación: Licencia, al día!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    Rechazado: Vidrios Polarizados!
+  </div>
+  <div class="alert alert-warning" role="alert">
+    Cuidado: Por vencer Kilometraje!
+  </div>
+  
 </ion-content>

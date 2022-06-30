@@ -1,0 +1,35 @@
+ion-content {
+
+    #header {
+
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+
+    .progress, .progress-bar {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+h1{
+    
+    font-weight: 600;
+    font-size: 22px;
+    color: #030303;
+
+}
+
+h2{
+    padding-left: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #030303;
+
+}
+
+.alert {
+
+    padding-left: 30px;  
+}
+}
