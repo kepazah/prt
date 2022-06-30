@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PRT online</string>
+    <string name="title_activity_main">PRT online</string>
+    <string name="package_name">prt.kepazah.www</string>
+    <string name="custom_url_scheme">prt.kepazah.www</string>
+</resources>
