@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -11,11 +12,16 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
 
-    this.obtenerFeriados();
+    this.obtenerFeriados2();
     
   }
 
+    constructor(private http: HttpClient){
 
+
+
+    }
+  //Conexión  Consola V1 Artesanal
   obtenerFeriados() {
 
     fetch('https://apis.digital.gob.cl/fl/feriados/2022').then(dato=>{
@@ -27,6 +33,13 @@ export class AppComponent implements OnInit{
     })
   }
 
+  //Conexión  Consola V2 HttpClient
+  obtenerFeriados2(){
 
+    this.http.get('https://apis.digital.gob.cl/fl/feriados/2022').subscribe(listadoFeriados=>{
+      console.log(listadoFeriados);
+    })
+
+  }
   
 }
