@@ -36,10 +36,22 @@ export class AppComponent implements OnInit{
   //Conexión  Consola V2 HttpClient
   obtenerFeriados2(){
 
-    this.http.get('https://apis.digital.gob.cl/fl/feriados/2022').subscribe(listadoFeriados=>{
-      console.log(listadoFeriados);
+    this.http.get('https://apis.digital.gob.cl/fl/feriados/2022').subscribe((listadoFeriados: any)=>{
+      
+    listadoFeriados.map((auxFeriado: any)=>{
+      
+      let feriado = {
+
+        nombre: auxFeriado.nombre,
+        fecha: auxFeriado.fecha,
+        irrenunciable: auxFeriado.irrenunciable,
+        tipo: auxFeriado.tipo,
+
+
+      }
+      console.log(feriado);
     })
 
-  }
-  
+  })
+}
 }
