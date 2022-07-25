@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
 
-
+  feriados = [];
   ngOnInit() {
 
-    this.obtenerFeriados2();
+    this.obtenerFeriados();
     
   }
 
@@ -22,25 +22,26 @@ export class AppComponent implements OnInit{
 
     }
   //Conexión  Consola V1 Artesanal
-  obtenerFeriados() {
+  obtenerFeriados1() {
 
     fetch('https://apis.digital.gob.cl/fl/feriados/2022').then(dato=>{
       if (dato.ok){
         dato.json().then(listaFeriados=>{
-      console.log(listaFeriados);
+     // console.log(listaFeriados);
+     
         })
       }
     })
   }
 
   //Conexión  Consola V2 HttpClient
-  obtenerFeriados2(){
+  obtenerFeriados(){
 
     this.http.get('https://apis.digital.gob.cl/fl/feriados/2022').subscribe((listadoFeriados: any)=>{
       
     listadoFeriados.map((auxFeriado: any)=>{
       
-      let feriado = {
+      let feriado: any = {
 
         nombre: auxFeriado.nombre,
         fecha: auxFeriado.fecha,
@@ -49,6 +50,7 @@ export class AppComponent implements OnInit{
 
 
       }
+      this.feriados.push(feriado);
       console.log(feriado);
     })
 

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Notificaciones
+      Feriados
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,23 +10,17 @@
   <div class="d-flex justify-content-center" style="margin-top:50px;"></div>
   <div id="header">
   <img src="../assets/images/logo.png">
-  <h1>Recordatorio</h1><br></div>
+  <h1>Feriados</h1><br></div>
 
-  <div class="alert alert-primary" role="alert">
-    Faltan 6 días para su visita
+
+
+  <div style="margin-left:10px; margin-right:15px;" *ngFor='let feriado of feriados' class="alert alert-primary" role="alert">
+    <h3><b>{{feriado.nombre}}</b></h3>
+    <p>Fecha: <b>{{feriado.fecha}}</b><br>
+    Tipo: <b>{{feriado.tipo}}</b><br>
+    Es Irrenunciable?: <b>{{feriado.ireenunciable?'Si':'No'}}</b></p>
   </div>
   
-  <div class="alert alert-success" role="alert">
-    Control de Gases exitoso!
-  </div>
-  <div class="alert alert-success" role="alert">
-    Documentación: Licencia, al día!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    Rechazado: Vidrios Polarizados!
-  </div>
-  <div class="alert alert-warning" role="alert">
-    Cuidado: Por vencer Kilometraje!
-  </div>
+ 
   
 </ion-content>
